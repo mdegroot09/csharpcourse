@@ -7,17 +7,16 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
-            var nums = new[] {1.1, 2.22, 3.3};
-            List<double> grades = new List<double>();
-            grades.Add(56.1);
-            grades[0]
+            var scores = new List<double>() {7.4, 9.2, 8.3, 7.5, 9.6};
+            scores.Add(56.1);
 
             var sum = 0.0;
-            foreach(double num in nums)
+            foreach(double grade in scores)
             {
-                sum += num;
+                sum += grade;
             }
-            Console.WriteLine(sum);
+            var avg = sum / scores.Count;
+            Console.WriteLine($"The average grade is {avg:N1}");
 
             if(args.Length > 0)
             {

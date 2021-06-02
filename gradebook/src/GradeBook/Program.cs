@@ -7,6 +7,9 @@ namespace GradeBook
     {
         static void Main(string[] args)
         {
+            var book = new Book(); 
+            book.AddGrade(89.1);
+            
             var scores = new List<double>() {7.4, 9.2, 8.3, 7.5, 9.6};
             scores.Add(56.1);
 

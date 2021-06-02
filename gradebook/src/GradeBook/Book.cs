@@ -4,11 +4,18 @@ namespace GradeBook
 {
     class Book 
     {
-        public void AddGrade(double score)
+        public Book(string name)
         {
-            scores.Add(score);
+            grades = new List<double>();
+            this.name = name;
+        }
+        
+        public void AddGrade(double grade)
+        {
+            grades.Add(grade);
         }
 
-        List<double> scores;
+        private List<double> grades;
+        private string name;
     }
 }

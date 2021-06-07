@@ -38,7 +38,7 @@ namespace GradeBook
             }
             else 
             {
-                Console.WriteLine($"Invalid value of {grade}. Grade must be between 0 and 100.");
+                throw new ArgumentException($"Invalid {nameof(grade)}");
             }
         }
 

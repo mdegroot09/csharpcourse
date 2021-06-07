@@ -18,9 +18,23 @@ namespace GradeBook
                     break;
                 }
                 
+                try 
+                {
+                    var grade = double.Parse(input);
+                    book.AddGrade(grade);
+                } 
+                catch (ArgumentException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine(e.Message);
+                }
+                finally{
+                    Console.WriteLine("**");
+                }
                 Console.WriteLine("Enter another grade or 'q' to quit:");
-                var grade = double.Parse(input);
-                book.AddGrade(grade);
             };
             Console.WriteLine("All grades have been entered.");
             

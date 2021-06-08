@@ -11,7 +11,7 @@ namespace GradeBook
             Name = name;
         }
 
-        public void AddLetterGrade(char letter)
+        public void AddGrade(char letter)
         {
             switch(letter)
             {
@@ -80,6 +80,13 @@ namespace GradeBook
         }
 
         private List<double> grades;
-        public string Name;
+
+        public string Name
+        {
+            get; 
+
+            // any operation that wants to write to a private set property outside of Book.cs will not have access
+            set; 
+        }
     }
 }

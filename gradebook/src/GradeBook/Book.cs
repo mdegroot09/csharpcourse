@@ -3,9 +3,25 @@ using System.Collections.Generic;
 
 namespace GradeBook
 {
-    public class Book 
+    public delegate void GradeAddedDelegate(object sender, EventArgs args);
+    
+    public class NamedObject
     {
-        public Book(string name)
+        public NamedObject(string name)
+        {
+            Name = name;
+        }
+
+        public string Name 
+        {
+            get;
+            set;
+        }
+    }
+    
+    public class Book : NamedObject
+    {
+        public Book(string name) : base(name)
         {
             grades = new List<double>();
             Name = name;
